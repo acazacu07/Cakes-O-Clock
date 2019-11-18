@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<section class="container margin">
+    <% @items.each do |item| %>
+    <div class="category-card">
+        <%= link_to (image_tag item.image_url, :class => "img"), item %>
+        <h2><%= item.title %></h2>
+        <p class="text-justify"><%= item.description %></p>
+        <h3>Price <%= number_to_currency(item.price, :unit => "€") %> </h3>
+        <div class="mb-1" >
+            <%= link_to 'SHOW',  item, :class => "btn-secondary", :role => "button" %>
+        </div>
+        <% if session[:login] == 1 %>
+        	<a><%= link_to 'Edit', edit_item_path(item) %></a>
+			<a><%= link_to 'Destroy',  item, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+		<% end %>
+    </div>
+    <% end %>
+
+<% if session[:login] == 1 %>    
+<%= link_to 'New Item', new_item_path, :class =>"button", :role=>"button" %>
+<% end %>
+
+</section>
+

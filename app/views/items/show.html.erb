@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<section class="container margin">
+    <div class="category-card">
+        <h1><%= @item.title %></h1>
+        <%= image_tag @item.image_url, :class => 'img'  %>
+        <p class="text-justify"><%= @item.description %></p>
+        <h3>Price <%= number_to_currency(@item.price, :unit => "€") %> </h3>
+        <br>
+        Category: <%= @item.category %>
+        <br>
+         <div class="mb-1" >
+
+        </div>
+        <% if session[:login] == 1 %>
+        	<a><%= link_to 'Back',  items_path %></a>
+			<a><%= link_to 'Edit',  edit_item_path(@item) %></a>
+		<% end %>
+    </div>
+</section>
+

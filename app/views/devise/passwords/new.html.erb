@@ -1,0 +1,24 @@
+<h1 class="tex-center"> Forgot your password? </h1>
+
+<section class="container margin">
+    <div class="form-card">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+        
+        <div class="padding">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-inputs" %>
+        </div>
+
+        <div class="padding">
+            <%= f.submit "RESET PASSWORD" %>
+        </div>
+          
+        <div class="padding">
+            <p class="text-center">
+                <%= render "devise/shared/links", class:"link" %>
+            </p>
+        </div>
+     <% end %>
+    </div>
+</section>

@@ -1,0 +1,41 @@
+<h1 class="tex-center"> Create an Account </h1>
+<section class="container margin">
+    <div class="form-card">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+        <p class="text-center"> Please enter your details </p>
+       
+        <div class="padding">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" , class:"form-inputs"%>
+        </div>
+
+        <div class="padding">
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "new-password", class:"form-inputs" %>
+        </div>
+
+        <div class="padding">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-inputs" %>
+        </div>
+        
+        <div class="padding">
+            <%= f.submit "CREATE ACCOUNT" %>
+        </div>
+        
+        <div class="padding">
+            <p class="text-center">
+                Do you already have a account? 
+                <%= render "devise/shared/links", class:"link" %>
+            </p>
+        </div>
+     <% end %>
+    </div>
+</section>
+
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= yield(:title) %> | Cakes O'clock</title>
+        <%= csrf_meta_tags %>
+
+
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+    
+    <body>
+    
+    <header class="flex-container">
+        <figure class="">
+            <%= link_to image_tag("Cakes-O'clock-logo.png", alt: "Cakes O'clock logo"), "/" %>
+        </figure>
+        <form class="form-search">
+            <input type="text" name="search" placeholder="Search..">
+        </form>
+        
+        <div class="login">
+        	<% if user_signed_in? %>
+            	<a href="#"> Hi <%= current_user.email %></a>
+             	<%= link_to 'LOGOUT', destroy_user_session_path, :method => :delete, :class =>"btn-primary", :role=>"button" %>
+        	<% else %>
+             	<%= link_to 'LOGIN', new_user_session_path, :class =>"btn-primary", :role=>"button" %>
+        	<% end %>
+        	
+        	<% if session[:login] == 1 %> 
+        <li><%= link_to "Admin Logout", logout_path %></li>
+        <% else %>
+        
+        <li><%= link_to "Admin Login", login_path %></li>
+        <% end %>
+        </div>
+        
+        <div class="shop-icon">
+            <a class="" href="" >
+                 <%= image_tag("Shop.png", alt: "shopping cart") %>
+            </a>
+        </div>
+    </header>
+    <nav class="menu">
+        <a><%= link_to "HOME", "/" %></a>
+        <a><%= link_to "CAKES", "/category/Cakes" %></a>
+        <a><%= link_to "BROWNIES", "/category/Brownies" %></a>
+        <a><%= link_to "CUPCAKES",  "/category/Cupcakes" %></a>
+        <a><%= link_to "COOKIES", "/category/Cookies" %></a>   
+    </nav>
+      
+
+    <main class="">
+    <%= yield %>
+    </main>
+    
+    
+    <footer>
+        <h4 class="footer-h4">Follow us on</h4>
+        <div class="container social-media">
+            <div class="pr-1">
+                <a href="" target="" > 
+                    <%= image_tag("fb.png", alt: "facebook", :class => "img") %>
+                </a>
+            </div>
+            <div class="pr-1">
+                <a href="" target="" > 
+                    <%= image_tag("instagram.png", alt: "instagram", :class => "img") %>
+                </a>
+            </div>
+            <div class="pr-1">
+                <a href="" target=""> 
+                    <%= image_tag("twitter.png", alt: "twitter", :class => "img") %>
+                </a>
+            </div>
+        </div>
+        <p>® 2019 Cakes O'clock Shop. All rights are reserved.</p>
+    </footer>
+  </body>
+</html>

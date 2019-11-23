@@ -1,0 +1,35 @@
+<% provide(:title, "Cakes O'clock") %>
+
+
+<section class="banner">
+	<div class="heading">
+		<h1 class="banner-h1">
+			Cakes O'Clock
+		</h1>
+		<h2 class="banner-h2">
+			Checkout out our e-shop, and order now your dessert from our local shop
+		</h2>
+		<%= link_to 'REGISTER', new_user_registration_path, :class =>"btn-primary btn-large", :role=>"button" %>
+	</div>
+</section>
+<h2 class="tex-center"> Our Products </h2>
+<section class="container margin">
+	<% @categories.each do |category| %>
+	<div class="product-card">
+		<%= link_to (image_tag category.image, :class=>"img"), category %>
+		<h3><%= category.title %></h3>
+		<div class="mb-1" >
+			<a href="/category/<%= category.title %>" target="" class="btn-secondary" role="button" aria-pressed="true">
+       		SELECT
+    		</a>
+		</div>
+	</div>
+	<% end %>
+</section>
+
+<% if session[:login] == 1 %>
+	<a><%= link_to 'New Category', new_category_path %> </a>
+<% end %>
+
+
+

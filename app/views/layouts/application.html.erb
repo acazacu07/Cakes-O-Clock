@@ -21,17 +21,17 @@
         
         <div class="login">
         	<% if user_signed_in? %>
-            	<a href="#"> Hi <%= current_user.email %></a>
-             	<%= link_to 'LOGOUT', destroy_user_session_path, :method => :delete, :class =>"btn-primary", :role=>"button" %>
+            	<%= link_to 'Edit Profile', edit_user_registration_path, :class =>"btn-primary", :role=>"button" %><br>
+             	<br><%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class =>"btn-primary", :role=>"button" %><br>
         	<% else %>
-             	<%= link_to 'LOGIN', new_user_session_path, :class =>"btn-primary", :role=>"button" %>
+             	<%= link_to 'Login', new_user_session_path, :class =>"btn-primary", :role=>"button" %> <br>
         	<% end %>
         	
         	<% if session[:login] == 1 %> 
-        <li><%= link_to "Admin Logout", logout_path %></li>
+        <br><%= link_to "Admin Logout", logout_path,:class =>"btn-primary", :role=>"button" %>
         <% else %>
         
-        <li><%= link_to "Admin Login", login_path %></li>
+        <br><%= link_to "Admin Login", login_path, :class =>"btn-primary", :role=>"button"  %>
         <% end %>
         </div>
         

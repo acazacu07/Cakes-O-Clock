@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/login' =>'user#login'
   get 'logout' =>'user#logout'
 
+  get '/cart/:id' => 'cart#add'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

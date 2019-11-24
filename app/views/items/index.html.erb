@@ -10,7 +10,7 @@
         <h3>Price <%= number_to_currency(item.price, :unit => "€") %> </h3>
         <div class="mb-1" >
             <% if user_signed_in? %>
-  				<a href="/cart/<%= item.id %>" class="button">Add to Cart</a> 
+  				<a href="/cart/<%= item.id %>" class="btn-secondary">Add to Cart</a> 
 			<% end %>
             <%= link_to 'SHOW',  item, :class => "btn-secondary", :role => "button" %>
         </div>

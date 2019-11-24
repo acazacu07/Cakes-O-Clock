@@ -8,6 +8,9 @@
         <p class="text-justify"><%= item.description %></p>
         <h3>Price <%= number_to_currency(item.price, :unit => "€") %> </h3>
         <div class="mb-1" >
+            
+  				<a href="/cart/<%= item.id %>" class="btn-secondary">Add to Cart</a> 
+			
             <%= link_to 'SHOW',  item, :class => "btn-secondary", :role => "button" %>
         </div>
         <% if session[:login] == 1 %>

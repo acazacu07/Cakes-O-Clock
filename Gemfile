@@ -38,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'railties','~>5.0.7.2' 
 # add this line if getting an error
-gem 'devise', '~>4.6.0'
+gem 'devise', '~>4.7.1'
 
 
 group :development, :test do

@@ -34,4 +34,35 @@ class CartController < ApplicationController
     end  
   end
 
+  def remove
+    id = params[:id]
+    cart = session[:cart]
+    cart.delete id
+    
+    redirect_to :root
+  end
+
+
+  def clearCart
+    # clear cart and remove all items 
+    session[:cart] = nil
+    redirect_to :action => :index
+    
+  end
+
+  def decrease
+    id = params[:id]
+    cart = session[:cart]
+    if cart[id] == 1 then
+       cart.delete id
+     else
+     cart[id] = cart[id] - 1
+    end
+     #Taking us to cart index[view] page
+    redirect_to :action => :index
+    
+  end
+
+
+
 end

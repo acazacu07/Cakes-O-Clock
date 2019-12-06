@@ -9,20 +9,20 @@
         <h3>Price <%= number_to_currency(item.price, :unit => "€") %> </h3>
         <div class="mb-1" >
             
-  				<a href="/cart/<%= item.id %>" class="btn-secondary">Add to Cart</a> 
-			
+                <a href="/cart/<%= item.id %>" class="btn-secondary">Add to Cart</a> 
+            
             <%= link_to 'SHOW',  item, :class => "btn-secondary", :role => "button" %>
         </div>
         <% if session[:login] == 1 %>
-        	<a><%= link_to 'Edit', edit_item_path(item) %></a>
-			<a><%= link_to 'Destroy',  item, method: :delete, data: { confirm: 'Are you sure?' } %></a>
-		<% end %>
+            <a><%= link_to 'Edit', edit_item_path(item) %></a>
+            <a><%= link_to 'Destroy',  item, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+        <% end %>
     </div>
     <% end %>
-
-<% if session[:login] == 1 %>    
-<%= link_to 'New Item', new_item_path, :class =>"button", :role=>"button" %>
-<% end %>
-
+    <div class="category-card">
+        <% if session[:login] == 1 %>  
+        <%= link_to 'New Item', new_item_path, :class =>"btn-secondary", :role=>"button" %>
+        <% end %>
+    </div>
 </section>
 

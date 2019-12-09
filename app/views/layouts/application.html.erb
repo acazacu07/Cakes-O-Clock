@@ -20,20 +20,18 @@
         </form>
         
         <div class="login">
-        	<% if user_signed_in? %>
+        	<% if current_user %>
             	<%= link_to 'Edit Profile', edit_user_registration_path, :class =>"btn-primary", :role=>"button" %><br>
              	<br><%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class =>"btn-primary", :role=>"button" %><br>
         	<% else %>
              	<%= link_to 'Login', new_user_session_path, :class =>"btn-primary", :role=>"button" %> <br>
         	<% end %>
         	
-        	<% if session[:login] == 1 %> 
-        <br><%= link_to "Admin Logout", logout_path,:class =>"btn-primary", :role=>"button" %>
-        <% else %>
-        
-        <br><%= link_to "Admin Login", login_path, :class =>"btn-primary", :role=>"button"  %>
+        	<% if admin_user? %> 
+                <br><%= link_to "Admin Login", login_path, :class =>"btn-primary", :role=>"button"  %>
         <% end %>
         </div>
+        
         
         <div class="shop-icon">
             <a class="" href="" >

@@ -1,0 +1,62 @@
+current directory: /Users/nadyahamad/Desktop/NCI | Web Tech HD/Server Side /Cakes-O-Clock/vendor/bundle/ruby/2.6.0/gems/ffi-1.11.3/ext/ffi_c
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20191209-4340-zhu5rj.rb extconf.rb
+checking for ffi.h... no
+checking for ffi.h in /usr/local/include,/usr/include/ffi... no
+checking for shlwapi.h... no
+checking for rb_thread_call_without_gvl()... yes
+checking for ruby_native_thread_p()... yes
+checking for ruby_thread_has_gvl_p()... yes
+creating extconf.h
+creating Makefile
+
+current directory: /Users/nadyahamad/Desktop/NCI | Web Tech HD/Server Side /Cakes-O-Clock/vendor/bundle/ruby/2.6.0/gems/ffi-1.11.3/ext/ffi_c
+make "DESTDIR=" clean
+libffi.darwin.mk:80: warning: overriding commands for target `"/Users/nadyahamad/Desktop/NCI'
+libffi.darwin.mk:75: warning: ignoring old commands for target `"/Users/nadyahamad/Desktop/NCI'
+libffi.darwin.mk:80: warning: overriding commands for target `|'
+libffi.darwin.mk:75: warning: ignoring old commands for target `|'
+libffi.darwin.mk:80: warning: overriding commands for target `Web'
+libffi.darwin.mk:75: warning: ignoring old commands for target `Web'
+libffi.darwin.mk:80: warning: overriding commands for target `Tech'
+libffi.darwin.mk:75: warning: ignoring old commands for target `Tech'
+libffi.darwin.mk:80: warning: overriding commands for target `HD/Server'
+libffi.darwin.mk:75: warning: ignoring old commands for target `HD/Server'
+libffi.darwin.mk:80: warning: overriding commands for target `Side'
+libffi.darwin.mk:75: warning: ignoring old commands for target `Side'
+
+current directory: /Users/nadyahamad/Desktop/NCI | Web Tech HD/Server Side /Cakes-O-Clock/vendor/bundle/ruby/2.6.0/gems/ffi-1.11.3/ext/ffi_c
+make "DESTDIR="
+libffi.darwin.mk:80: warning: overriding commands for target `"/Users/nadyahamad/Desktop/NCI'
+libffi.darwin.mk:75: warning: ignoring old commands for target `"/Users/nadyahamad/Desktop/NCI'
+libffi.darwin.mk:80: warning: overriding commands for target `|'
+libffi.darwin.mk:75: warning: ignoring old commands for target `|'
+libffi.darwin.mk:80: warning: overriding commands for target `Web'
+libffi.darwin.mk:75: warning: ignoring old commands for target `Web'
+libffi.darwin.mk:80: warning: overriding commands for target `Tech'
+libffi.darwin.mk:75: warning: ignoring old commands for target `Tech'
+libffi.darwin.mk:80: warning: overriding commands for target `HD/Server'
+libffi.darwin.mk:75: warning: ignoring old commands for target `HD/Server'
+libffi.darwin.mk:80: warning: overriding commands for target `Side'
+libffi.darwin.mk:75: warning: ignoring old commands for target `Side'
+make: Circular "/Users/nadyahamad/Desktop/NCI <- "/Users/nadyahamad/Desktop/NCI dependency dropped.
+make: Circular Web <- "/Users/nadyahamad/Desktop/NCI dependency dropped.
+make: Circular Web <- Web dependency dropped.
+make: Circular Tech <- "/Users/nadyahamad/Desktop/NCI dependency dropped.
+make: Circular Tech <- Web dependency dropped.
+make: Circular Tech <- Tech dependency dropped.
+make: Circular HD/Server <- "/Users/nadyahamad/Desktop/NCI dependency dropped.
+make: Circular HD/Server <- Web dependency dropped.
+make: Circular HD/Server <- Tech dependency dropped.
+make: Circular HD/Server <- HD/Server dependency dropped.
+make: Circular Side <- "/Users/nadyahamad/Desktop/NCI dependency dropped.
+make: Circular Side <- Web dependency dropped.
+make: Circular Side <- Tech dependency dropped.
+make: Circular Side <- HD/Server dependency dropped.
+make: Circular Side <- Side dependency dropped.
+mkdir -p "/Users/nadyahamad/Desktop/NCI | Web Tech HD/Server Side /Cakes-O-Clock/vendor/bundle/ruby/2.6.0/gems/ffi-1.11.3/ext/ffi_c"/libffi-x86_64; (if [ ! -f "/Users/nadyahamad/Desktop/NCI | Web Tech HD/Server Side /Cakes-O-Clock/vendor/bundle/ruby/2.6.0/gems/ffi-1.11.3/ext/ffi_c/libffi"/configure ]; then echo "Running autoreconf for libffi"; cd "/Users/nadyahamad/Desktop/NCI | Web Tech HD/Server Side /Cakes-O-Clock/vendor/bundle/ruby/2.6.0/gems/ffi-1.11.3/ext/ffi_c/libffi" && /bin/sh /Users/nadyahamad/Desktop/NCI | Web Tech HD/Server Side /Cakes-O-Clock/vendor/bundle/ruby/2.6.0/gems/ffi-1.11.3/ext/ffi_c/libffi/autogen.sh > /dev/null; fi); (if [ ! -f "/Users/nadyahamad/Desktop/NCI | Web Tech HD/Server Side /Cakes-O-Clock/vendor/bundle/ruby/2.6.0/gems/ffi-1.11.3/ext/ffi_c"/libffi-x86_64/Makefile ]; then echo "Configuring libffi for x86_64"; cd "/Users/nadyahamad/Desktop/NCI | Web Tech HD/Server Side /Cakes-O-Clock/vendor/bundle/ruby/2.6.0/gems/ffi-1.11.3/ext/ffi_c"/libffi-x86_64 && env CC=" xcrun clang" CFLAGS="-arch x86_64 " LDFLAGS="-arch x86_64" "/Users/nadyahamad/Desktop/NCI | Web Tech HD/Server Side /Cakes-O-Clock/vendor/bundle/ruby/2.6.0/gems/ffi-1.11.3/ext/ffi_c/libffi"/configure --disable-static --with-pic=yes --disable-dependency-tracking --disable-docs --host=x86_64-apple-darwin > /dev/null; fi); /Library/Developer/CommandLineTools/usr/bin/make -C "/Users/nadyahamad/Desktop/NCI | Web Tech HD/Server Side /Cakes-O-Clock/vendor/bundle/ruby/2.6.0/gems/ffi-1.11.3/ext/ffi_c"/libffi-x86_64
+Configuring libffi for x86_64
+configure: error: unsafe srcdir value: '/Users/nadyahamad/Desktop/NCI | Web Tech HD/Server Side /Cakes-O-Clock/vendor/bundle/ruby/2.6.0/gems/ffi-1.11.3/ext/ffi_c/libffi'
+make[1]: *** No targets specified and no makefile found.  Stop.
+make: *** [/Cakes-O-Clock/vendor/bundle/ruby/2.6.0/gems/ffi-1.11.3/ext/ffi_c"/libffi-x86_64/.libs/libffi_convenience.a] Error 2
+
+make failed, exit code 2

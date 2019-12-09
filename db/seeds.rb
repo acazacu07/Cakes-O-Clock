@@ -46,3 +46,9 @@ title:'Cupcakes',
 category:'Cupcakes',
 description:'A small cake designed to serve one person',
 price:'10')
+# . . .
+User.create!(FirstName:'admin',
+LastName:'X',
+email:'admin@cakes.ie',
+password:'password',
+admin:'true')

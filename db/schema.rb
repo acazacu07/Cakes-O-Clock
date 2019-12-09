@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20191118153809) do
-=======
 ActiveRecord::Schema.define(version: 20191208234710) do
->>>>>>> 519eb6ffcbc624ae8492d8715107796e80d5ce6e
 
   create_table "categories", force: :cascade do |t|
     t.string   "image"
@@ -57,7 +53,6 @@ ActiveRecord::Schema.define(version: 20191208234710) do
   create_table "users", force: :cascade do |t|
     t.string   "FirstName"
     t.string   "LastName"
-    t.string   "password_digest"
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"

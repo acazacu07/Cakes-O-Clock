@@ -59,6 +59,11 @@ class CategoriesController < ApplicationController
       format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
       format.json { head :no_content }
     end
+    
+    def search
+     st = "%#{params[:q]}%"
+     @items = Category.where("title like ?", st)
+    end
   end
 
   private

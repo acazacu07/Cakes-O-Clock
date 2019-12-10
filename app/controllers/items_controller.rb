@@ -50,7 +50,7 @@ class ItemsController < ApplicationController
       end
     end
   end
-
+  
   # DELETE /items/1
   # DELETE /items/1.json
   def destroy
@@ -59,6 +59,12 @@ class ItemsController < ApplicationController
       format.html { redirect_to items_url, notice: 'Item was successfully destroyed.' }
       format.json { head :no_content }
     end
+    
+    def search
+     st = "%#{params[:q]}%"
+     @items = Item.where("title like ?", st)
+    end
+
   end
 
   private

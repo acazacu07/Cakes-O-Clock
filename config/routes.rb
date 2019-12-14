@@ -39,7 +39,7 @@ Rails.application.routes.draw do
   get '/checkout' => 'cart#createOrder'
   get '/paid/:id' => 'static_pages#paid'
  
- post '/search' => 'items#search'
+  post '/search' => 'items#search'
 
 
 

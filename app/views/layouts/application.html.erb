@@ -15,13 +15,11 @@
         <figure class="">
             <%= link_to image_tag("Cakes-O'clock-logo.png", alt: "Cakes O'clock logo"), "/" %>
         </figure>
-        <form class="form-search">
-            <%= form_tag("/search", :method => "post") do %>
-            <%= label_tag(:q, "Search for:") %>
-            <%= text_field_tag(:q) %>
-            <%= submit_tag("Search") %>
-        <% end %>
-         <%=render partial:'layouts/search'%>
+        <%= form_tag("/search", :method => "post") do %>
+<%= label_tag(:q, "Search for:") %>
+<%= text_field_tag(:q) %>
+<%= submit_tag("Search") %>
+<% end %>
          
         </form>
         

@@ -13,14 +13,14 @@
             
             <%= link_to 'SHOW',  item, :class => "btn-secondary", :role => "button" %>
         </div>
-        <% if session[:login] == 1 %>
+        <% if admin_user? %>
             <a><%= link_to 'Edit', edit_item_path(item) %></a>
             <a><%= link_to 'Destroy',  item, method: :delete, data: { confirm: 'Are you sure?' } %></a>
         <% end %>
     </div>
     <% end %>
     <div class="category-card">
-        <% if session[:login] == 1 %>  
+        <% if admin_user? %>  
         <%= link_to 'New Item', new_item_path, :class =>"btn-secondary", :role=>"button" %>
         <% end %>
     </div>

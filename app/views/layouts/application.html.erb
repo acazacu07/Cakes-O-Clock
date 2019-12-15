@@ -15,10 +15,16 @@
         <figure class="">
             <%= link_to image_tag("Cakes-O'clock-logo.png", alt: "Cakes O'clock logo"), "/" %>
         </figure>
-        <form class="form-search">
-            <input type="text" name="search" placeholder="Search..">
-        </form>
         
+        <form class="form-search">
+            <%= form_tag("/search", :method => "post") do %>
+            <%= label_tag(:q, "Search for:") %>
+            <%= text_field_tag(:q) %>
+            <%= submit_tag("Search") %>
+          
+            <% end %>
+       </form>>
+       
         <div class="login">
         	<% if user_signed_in? %>
             	<%= link_to 'Edit Profile', edit_user_registration_path, :class =>"btn-primary", :role=>"button" %><br>
@@ -26,15 +32,12 @@
         	<% else %>
              	<%= link_to 'Login', new_user_session_path, :class =>"btn-primary", :role=>"button" %> <br>
         	<% end %>
-        	
-        	<% if session[:login] == 1 %> 
-        <br><%= link_to "Admin Logout", logout_path,:class =>"btn-primary", :role=>"button" %>
-        <% else %>
         
-        <br><%= link_to "Admin Login", login_path, :class =>"btn-primary", :role=>"button"  %>
+        
+        <% if admin_user? %>
+    <br><%= link_to "Admin Login", :class =>"btn-primary", :role=>"button"  %>
         <% end %>
         </div>
-        
         <div class="shop-icon">
             <a class="" href="" >
                 <%= link_to  "/cart/index" do %>

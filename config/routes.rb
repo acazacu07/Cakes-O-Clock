@@ -15,15 +15,17 @@ Rails.application.routes.draw do
   get 'category/:title', to: 'static_pages#category'
 
   get '/login' =>'user#login'
-  get 'logout' =>'user#logout'
-
+  get '/logout' =>'user#logout'
+  
+  post '/search' => 'items#search'
+  
   get '/cart/clear'=>  'cart#clearCart'
   get '/cart' => 'cart#index'
   get '/cart/:id' => 'cart#add'
   get '/cart/remove/:id' => 'cart#remove'
   get '/cart/decrease/:id' => 'cart#decrease'
 
-
+  
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

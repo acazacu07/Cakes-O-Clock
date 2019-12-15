@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= yield(:title) %> | Cakes O'clock</title>
+        <%= csrf_meta_tags %>
+
+
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+    
+    <body>
+    
+    <header class="flex-container">
+        <figure class="">
+            <%= link_to image_tag("Cakes-O'clock-logo.png", alt: "Cakes O'clock logo"), "/" %>
+        </figure>
+        <form class="form-search">
+            <%= form_tag("/search", :method => "post") do %>
+            <%= label_tag(:q, "Search for:") %>
+            <%= text_field_tag(:q) %>
+            <%= submit_tag("Search") %>
+        <% end %>
+        </form>
+        
+        <div class="login">
+        	<% if current_user %>
+            	<%= link_to 'Edit Profile', edit_user_registration_path, :class =>"btn-primary", :role=>"button" %><br>
+             	<br><%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class =>"btn-primary", :role=>"button" %><br>
+        	<% else %>
+             	<%= link_to 'Login', new_user_session_path, :class =>"btn-primary", :role=>"button" %> <br>
+        	<% end %>
+        	
+        	<% if admin_user? %> 
+                <br><%= link_to "Admin Login", :class =>"btn-primary", :role=>"button"  %>
+        <% end %>
+        </div>
+        
+        
+        <div class="shop-icon">
+            <a class="" href="" >
+                <%= link_to  "/cart/index" do %>
+                 <%= image_tag("Shop.png", alt: "shopping cart") %>
+                 <% end %>
+            </a>
+        </div>
+    </header>
+    <nav class="menu">
+        <a><%= link_to "HOME", "/" %></a>
+        <a><%= link_to "CAKES", "/category/Cakes" %></a>
+        <a><%= link_to "BROWNIES", "/category/Brownies" %></a>
+        <a><%= link_to "CUPCAKES",  "/category/Cupcakes" %></a>
+        <a><%= link_to "COOKIES", "/category/Cookies" %></a>   
+    </nav>
+      
+
+    <main class="">
+    <%= yield %>
+    </main>
+    
+    
+    <footer>
+        <h4 class="footer-h4">Follow us on</h4>
+        <div class="container social-media">
+            <div class="pr-1">
+                <a href="" target="" > 
+                    <%= image_tag("fb.png", alt: "facebook", :class => "img") %>
+                </a>
+            </div>
+            <div class="pr-1">
+                <a href="" target="" > 
+                    <%= image_tag("instagram.png", alt: "instagram", :class => "img") %>
+                </a>
+            </div>
+            <div class="pr-1">
+                <a href="" target=""> 
+                    <%= image_tag("twitter.png", alt: "twitter", :class => "img") %>
+                </a>
+            </div>
+        </div>
+        <p>® 2019 Cakes O'clock Shop. All rights are reserved.</p>
+    </footer>
+  </body>
+</html>

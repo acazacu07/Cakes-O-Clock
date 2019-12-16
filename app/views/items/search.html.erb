@@ -19,7 +19,7 @@
                 <%= number_to_currency(item.price, :unit => "€") %>
             </div>
             <div class="links">
-                <% if user_signed_in? %>
+                <% if admin_user? %>
                     <%= link_to 'Edit', edit_item_path(item), :class =>"btn-admin" %>
                     <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"btn-admin" %>
                 <%else%>

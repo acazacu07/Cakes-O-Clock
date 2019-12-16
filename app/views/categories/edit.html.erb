@@ -2,5 +2,7 @@
 
 <%= render 'form', category: @category %>
 
-<%= link_to 'Show', @category %> |
-<%= link_to 'Back', categories_path %>
+<div class="container margin">
+	<a><%= link_to 'Show', @category, :class =>"btn-admin" %></a>
+	<a><%= link_to 'Back', categories_path, :class =>"btn-admin" %> </a>
+</div>

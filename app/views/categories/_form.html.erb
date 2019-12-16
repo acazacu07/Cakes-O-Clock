@@ -1,5 +1,5 @@
 <section class="container margin">
-    <div class="form-card">
+    <div class="form-card padding-1">
     <%= form_for(category) do |f| %>
         <% if category.errors.any? %>
         <div id="error_explanation">
@@ -23,7 +23,7 @@
         </div>
 
         <div class="padding">
-            <%= f.submit "CREATE CATEGORY"%>
+            <%= f.submit "Save"%>
           </div>
     <% end %>
     </div>

@@ -1,10 +1,9 @@
 /*= GENERAL CSS - LARGE/DESKTOP
 --------------------------------------------------------*/
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  /* line-height: 1.15; 1 */
+  -webkit-text-size-adjust: 100%; 
 }
-
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -13,9 +12,10 @@ body {
     margin: 0;
 }
 
+/* Flexbox Layout to distribute the content */
 .flex-container {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
     margin: auto;
 }
 
@@ -25,106 +25,133 @@ body {
     margin: auto;
 }
 
-..border{
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+/* border all */
+.border{
     border: 1px solid #000;
 }
 
+/* border bottom decorated*/
+.bottom-dotted{
+    border-bottom: 5px dotted #230D0C;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+/* margin all */
 .margin{
     margin: 20px;
 }
 
+/* margin auto */
+.margin-auto{
+    margin: auto;
+}
+
+/* margin top of 2% */
 .mt-1{
-     margin-top: 5%;
+    margin-top: 2%;
 }
 
+/* margin left of 2% */
 .ml-1{
-     margin-left: 5%;
+    margin-left: 2%;
 }
 
+/* margin right of 2% */
 .mr-1{
-     margin-right: 5%;
+    margin-right: 2%;
 }
 
+/* margin bottom of 2% */
 .mb-1{
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
-.mt-2{
-     margin-top: 15%;
-}
-
-.ml-2{
-     margin-left: 15%;
-}
-
-.mr-2{
-     margin-right: 15%;
-}
-
-.mb-2{
-    margin-bottom: 15%;
-}
-
+/* padding all of 5%*/
 .padding-1{
-    margin: 10px;
+    padding: 5%;
 }
 
+/* padding top of 2% */
 .pt-1{
-    padding-top: 5%;
+    padding-top: 2%;
 }
 
+/* padding left of 2% */
 .pl-1{
-    padding-left: 5%;
+    padding-left: 2%;
 }
 
+/* padding right of 2% */
 .pr-1{
-    padding-right: 5%;
+    padding-right: 2%;
 }
 
+/* padding bottom of 2% */
 .pb-1{
-    padding-bottom: 5%;
+    padding-bottom: 2%;
 }
 
-.pt-2{
-    padding-top: 15%;
+/* Float Property to letf */
+.float-left{
+    float: left;
 }
 
-.pl-2{
-    padding-left: 15%;
+/* Float Property to right */
+.float-right{
+    float: right;
 }
 
-.pr-2{
-    padding-right: 15%;
+/* Text Alignment to the left */
+.text-left{
+    text-align: left;
 }
 
-.pb-2{
-    padding-bottom: 15%;
-}
-
-.pt-3{
-    padding-top: 25%;
-}
-
-.pl-3{
-    padding-left: 25%;
-}
-
-.pr-3{
-    padding-right: 25%;
-}
-
-.pb-3{
-    padding-bottom: 25%;
-}
-
-.pl-4{
-    padding-left: 50%;
-}
-
-h1 { 
-    font-weight: 800;
-    font-size: 2rem;
+/* Text Alignment to centre */
+.text-center{
     text-align: center;
+}
+
+/* Text Alignment to the right */
+.text-right{
+    text-align: right;
+}
+
+/* Text Alignment justify */
+.text-justify{
+    text-align: justify;
+}
+
+/* Image responsive*/
+.img {
+    width: 100%;
+    height: auto;
+}
+
+/* Headings*/
+    h1 { 
+        font-weight: 800;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    h2{
+        text-align: center;
+        font-weight: 800;
+        font-size: 1.8rem;
+    }
+
+h4{
+    font-weight: 200;
+    font-size: 1.5rem;
 }
 
 .banner-h1{
@@ -138,17 +165,6 @@ h1 {
     font-weight: 300;
     font-size: 2rem;
     color: #fff;
-}
-
-h2{
-    text-align: center;
-    font-weight: 800;
-    font-size: 1.5rem;
-}
-
-h4{
-    font-weight: 200;
-    font-size: 1.5rem;
 }
 
 .text-justify{
@@ -238,6 +254,20 @@ a.btn-primary:hover{
 .shop-icon{
     margin-top: 80px;
     padding: 0;
+    display: inline-block;
+}
+
+.btn-admin{
+    background-color: #F1EFEF;
+    color: #230D0C;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border:2px solid #230D0C;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
 }
 

@@ -1,7 +1,5 @@
 <h2>You Searched Our Product Catalog For <%= @search_term %></h2>
 
-<%=render 'layouts/search'%>
-
 <% if @items.length == 0  %>
 <br />
 <h2>No products were found to match your search</h2>
@@ -25,15 +23,15 @@
              <%= number_to_currency(item.price, :unit => "€") %>
           </div>
           <div class="links">
-            
             <% if user_signed_in? %>
-              <%= link_to 'SHOW',  item, :class => "btn-secondary", :role => "button" %>
+              <%= link_to 'Edit', edit_item_path(item) %>
+              <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
             <%else%>
-              <a href="/cart/<%= item.id %>" class="btn-secondary">Add to Cart</a> 
+            
+              <a href="/cart/<%= item.id %>">Add to Cart</a>
             <%end%>  
         </div>
         </td>
       </tr>
     <% end %>
 </table>
-

@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project Cakes O'Clock
 
-Things you may want to cover:
+Install
 
-* Ruby version
+Clone the repository
 
-* System dependencies
+git clone https://github.com/acazacu07/Cakes-O-Clock.git
+cd Cakes-O-Clock
 
-* Configuration
+Check your Ruby version
 
-* Database creation
+ruby -v
 
-* Database initialization
+ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
 
-* How to run the test suite
+Install dependencies
 
-* Services (job queues, cache servers, search engines, etc.)
+Bundle Install
 
-* Deployment instructions
+Initialize the database
 
-* ...
+rails db:environment:set RAILS_ENV=test
+rake db:schema:load RAILS_ENV=test 
+rails db:create db:migrate db:seed
+
+Serve
+rails s
+
+Admin login - first user created in the database - credentials canbe found in seeds

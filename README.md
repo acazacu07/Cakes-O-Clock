@@ -7,6 +7,7 @@ Install
 Clone the repository
 
 git clone https://github.com/acazacu07/Cakes-O-Clock.git
+
 cd Cakes-O-Clock
 
 Check your Ruby version

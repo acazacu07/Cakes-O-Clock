@@ -10,6 +10,12 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
+    @orderitems = Orderitem.all
+    @orderitems = Orderitem.where(order_id: params[:id])
+  @user = User.find(current_user.id)
+  @orders = @user.orders.all
+  @user = User.find(current_user.id)
+
   end
 
   # GET /orders/new
@@ -72,3 +78,5 @@ class OrdersController < ApplicationController
       params.require(:order).permit(:order_date, :user_id, :status)
     end
 end
+
+

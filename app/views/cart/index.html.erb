@@ -27,8 +27,14 @@
                 </div>
             </td>
             <td>
-                <%= quantity %>
-                <a href="/cart/decrease/<%= item.id %>">Decrease</a>
+                <div>
+                     <a href="/cart/increase/<%= item.id %>"><%= image_tag("Chevron_up.png", alt: "icon up") %></a>
+                     <p class="text-center"><%= quantity %></p>
+                      <a href="/cart/decrease/<%= item.id %>"><%= image_tag("Chevron_down.png", alt: "icon down") %></a>
+                </div>
+               
+                
+                
             </td>
             <td>
                 <h4 class="text-center">
@@ -41,16 +47,6 @@
             
     </table>
     <div class="payment-box">
-        <div class="payment-card">
-            <h2 class="text-center product-name mb-1 pb-1">Choose Location</h2>
-            <form action="/action_page.php">
-                <select name="location" class="mt-1">
-                    <option value="location1">location1</option>
-                    <option value="location2">location2</option>
-                    <option value="location3">location3</option>
-                </select>
-            </form>
-        </div>
         <div class="payment-card mt-2 pb-2">
             <h2 class="text-center product-name mb-1 pb-1">Cart Total</h2>
             <h3 class="price-text mb-1">

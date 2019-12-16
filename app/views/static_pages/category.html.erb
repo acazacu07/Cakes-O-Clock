@@ -5,24 +5,26 @@
     <div class="category-card">
         <%= link_to (image_tag item.image_url, :class => "img"), item %>
         <h2><%= item.title %></h2>
-        <p class="text-justify"><%= item.description %></p>
+        <div class="pl-1 pr-1">
+            <p class="text-justify"><%= item.description %></p>
+        </div>
         <h3>Price <%= number_to_currency(item.price, :unit => "€") %> </h3>
         <div class="mb-1" >
-            
-                <a href="/cart/<%= item.id %>" class="btn-secondary">Add to Cart</a> 
-            
             <%= link_to 'SHOW',  item, :class => "btn-secondary", :role => "button" %>
         </div>
         <% if admin_user? %>
-            <a><%= link_to 'Edit', edit_item_path(item) %></a>
-            <a><%= link_to 'Destroy',  item, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+        <div class="padding-1">
+            <a><%= link_to 'Edit', edit_item_path(item), :class =>"btn-admin"%></a>
+            <a><%= link_to 'Destroy',  item, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"btn-admin" %></a>
+        </div>
         <% end %>
     </div>
     <% end %>
-    <div class="category-card">
-        <% if admin_user? %>  
-        <%= link_to 'New Item', new_item_path, :class =>"btn-secondary", :role=>"button" %>
-        <% end %>
-    </div>
 </section>
+
+<% if admin_user? %>  
+<div class="container margin">
+    <a><%= link_to 'New Item', new_item_path, :class =>"btn-admin" %> </a>
+</div>
+<% end %>
 

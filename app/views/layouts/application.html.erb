@@ -32,11 +32,9 @@
             <% end %>
         </div>
         <div class="shop-icon">
-            <a class="" href="" >
-                <%= link_to  "/cart/index" do %>
-                 <%= image_tag("Shop.png", alt: "shopping cart") %>
-                 <% end %>
-            </a>
+            <% if user_signed_in? %>
+  				<%= link_to image_tag("Shop.png", alt: "shopping cart"), "/cart/index" %>
+			<% end %>
         </div>
     </header>
     <nav class="menu">

@@ -35,6 +35,12 @@ category:'Cakes',
 description:'A rich, dense, moist chocolate cake',
 price:'30')
 # . . .
+Item.create!(image_url: 'choco_cake.jpg',
+title:'Cheese Cake',
+category:'Cakes',
+description:'Can be prepared in flavors such as strawberry or toffee.',
+price:'25')
+# . . .
 Item.create!(image_url: 'brownies_prod.jpg',
 title:'Brownies',
 category:'Brownies',
@@ -46,3 +52,10 @@ title:'Cupcakes',
 category:'Cupcakes',
 description:'A small cake designed to serve one person',
 price:'10')
+
+User.create!(FirstName:'admin',
+LastName:'X',
+email:'admin@cakes.ie',
+password:'password',
+admin:'true')
+

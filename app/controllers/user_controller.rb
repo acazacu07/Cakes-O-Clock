@@ -3,7 +3,7 @@ class UserController < ApplicationController
    def login
         session[:login] = 1
         session[:cart] = nil
-        flash[:notice] = "Admin Login sucessfull!!"
+        flash[:notice] = "You are logged in!"
         redirect_to :controller => :items
     end 
     

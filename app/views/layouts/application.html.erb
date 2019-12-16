@@ -16,27 +16,20 @@
             <%= link_to image_tag("Cakes-O'clock-logo.png", alt: "Cakes O'clock logo"), "/" %>
         </figure>
         
-        <form class="form-search">
-            <%= form_tag("/search", :method => "post") do %>
-            <%= label_tag(:q, "Search for:") %>
+       <%= form_tag("/search", :class =>"form-search", :method => "post") do %>
             <%= text_field_tag(:q) %>
-            <%= submit_tag("Search") %>
-          
-            <% end %>
-       </form>>
+            <%= submit_tag("Search")%>
+        <% end %>
        
         <div class="login">
         	<% if user_signed_in? %>
-            	<%= link_to 'Edit Profile', edit_user_registration_path, :class =>"btn-primary", :role=>"button" %><br>
-             	<br><%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class =>"btn-primary", :role=>"button" %><br>
+            		<%= link_to image_tag("profile.png", alt: "profile icon"), edit_user_registration_path %>
         	<% else %>
              	<%= link_to 'Login', new_user_session_path, :class =>"btn-primary", :role=>"button" %> <br>
         	<% end %>
-        
-        
-        <% if admin_user? %>
-    <br><%= link_to "Admin Login", :class =>"btn-primary", :role=>"button"  %>
-        <% end %>
+             <% if admin_user? %>
+                <p> Admin Session </p>
+            <% end %>
         </div>
         <div class="shop-icon">
             <a class="" href="" >

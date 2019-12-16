@@ -12,8 +12,9 @@
     </div>
 </section>
 
-
+<% if admin_user? %>
 <div class="container margin">
 	<a><%= link_to 'Edit', edit_category_path(@category), :class =>"btn-admin" %></a>
 	<a><%= link_to 'Back', categories_path, :class =>"btn-admin" %> </a>
 </div>
+<% end %>

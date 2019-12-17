@@ -29,4 +29,4 @@ rails db:create db:migrate db:seed
 Serve
 rails s
 
-Admin login - first user created in the database - credentials canbe found in seeds
+
